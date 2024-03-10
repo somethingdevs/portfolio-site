@@ -5017,19 +5017,22 @@ sup {
 
 .tech {
   margin: 10px;
-  flex: 1 1 0;
+  flex: 1 0 30%;
 }
 
 .tech h2,
 .tech h3,
 .user-details h1,
-#education h1,
-#skills h1,
 body {
   font-weight: 400;
 }
 
+.tech:nth-child(3) {
+  margin-right: auto;
+}
+
 .user {
+  gap: 10px;
   text-align: center;
   font-size: 60px;
   display: flex;
@@ -5075,132 +5078,78 @@ body {
 .grid-container {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
+  /* Creates 3 columns of equal width */
   gap: 10px;
+  /* Adjust the gap between grid items */
   padding: 10px;
+  /* Optional: Adds some padding around the grid */
 }
 
 .grid-item {
-  background-color: #f8f8f8;
-  /* Light grey background for the items */
-  border-radius: 8px;
-  /* Rounded corners */
-  padding: 1rem;
-  /* Padding inside the items */
-  margin-bottom: 1rem;
-  /* Space between grid items */
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  /* Optional: adds a subtle shadow to each grid item for depth */
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-  margin-left: 10px;
+  background-color: #f0f0f0;
+  /* Light grey background for visibility */
+  border: 1px solid #ddd;
+  /* Adds a border around each grid item */
+  padding: 20px;
+  /* Adds some padding inside each grid item */
   text-align: center;
+  /* Centers the text inside each grid item */
 }
-
-#skills .grid-item:hover {
-  transform: translateY(-5px);
-  /* Moves the grid item up slightly when hovered */
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-  /* Darker shadow on hover for a 'lifting' effect */
-}
-
-.skill-gradient {
-  font-size: 1.5rem;
-  line-height: 2.5rem;
-  font-weight: bold;
-  align-self: center;
-  text-align: center;
-  margin-top: 1px;
-  background: #121FCF;
-  background: linear-gradient(to right, #121FCF 0%, #CF1512 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.skill-description-gradient {
-  color: #333;
-  font-size: 0.9rem;
-  margin: 0.5rem 0;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: bold;
-  align-self: center;
-  text-align: center;
-  margin-top: 1px;
-}
-
-.icons {
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 30px;
-}
-
-#skills .icons img {
-  margin: 0.1rem;
-  /* Adds margin around each icon */
-}
-
 
 .project {
-  display: flex;
-  align-items: center;
-  margin-bottom: 2rem;
-  /* Spacing between projects */
-  background-color: #f8f9fa;
-  /* Off-white background */
-  border-radius: 8px;
+  background-color: #f8f8f8;
+  /* Off white background */
+  border: 2px solid #eaeaea;
+  /* Light grey border */
+  border-radius: 10px;
   /* Rounded corners */
-  padding: 1rem;
-  /* Padding around the content */
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  /* Optional: adds a subtle shadow for depth */
+  width: 80%;
+  /* Adjust width as needed */
+  margin: 20px auto;
+  /* Centering the project div */
+  padding: 20px;
+  /* Spacing inside the project div */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  /* subtle shadow for depth */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  /* Center text and content */
 }
 
-.project-image img {
-  width: 150px;
-  /* Adjust based on your preference */
+.project-image {
+  max-width: 100%;
+  /* Responsive image size */
   height: auto;
-  margin-right: 1.5rem;
-  border-radius: 8px;
-  /* Optionally round corners of the image itself */
-  transition: transform 0.3s ease;
-  /* Smooth transition for hover effect */
-}
-
-.project-info {
-  flex: 1;
-}
-
-.project-info h2 {
-  margin: 0 0 0.5rem 0;
-  /* Added bottom margin for spacing */
-  padding: 0;
-}
-
-.project-info p {
-  font-size: 1rem;
-  /* Adjust based on your preference */
-  margin-bottom: 1rem;
-  /* Added bottom margin for spacing before the button */
-}
-
-.view-project-btn {
-  display: inline-block;
-  background-color: #007bff;
-  /* Example button color */
-  color: white;
-  padding: 10px 15px;
-  text-decoration: none;
   border-radius: 5px;
-  transition: background-color 0.3s ease;
-  /* Smooth background color transition on hover */
+  /* Rounded corners for the image */
+  margin-bottom: 15px;
+  /* Space below the image */
 }
 
-.view-project-btn:hover {
+.project-details {
+  margin-bottom: 15px;
+}
+
+.btn {
+  display: inline-block;
+  padding: 10px 20px;
+  color: #fff;
+  background-color: #007bff;
+  /* Bootstrap primary button color */
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.btn:hover,
+.btn:focus {
   background-color: #0056b3;
-  /* Darker shade on hover */
-}
-
-/* Hover effect on the entire project div */
-.project:hover .project-image img {
-  transform: scale(1.05);
-  /* Slightly enlarges the image */
+  /* Darker shade on hover/focus */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  text-decoration: none;
 }
